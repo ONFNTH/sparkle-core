@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+    implementation(fileTree("libs"))
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.11.0")
     // https://mvnrepository.com/artifact/org.yaml/snakeyaml
@@ -22,6 +23,10 @@ dependencies {
     implementation("net.byteflux:libby-core:1.3.0")
     // https://mvnrepository.com/artifact/org.realityforge.org.jetbrains.annotations/org.jetbrains.annotations
     implementation("org.realityforge.org.jetbrains.annotations:org.jetbrains.annotations:1.7.0")
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation("com.google.guava:guava:33.2.0-jre")
+
+
     implementation(kotlin("stdlib-jdk8"))
 
 
