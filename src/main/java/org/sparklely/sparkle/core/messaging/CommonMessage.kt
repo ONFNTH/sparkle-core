@@ -3,6 +3,7 @@ package org.sparklely.sparkle.core.messaging
 import org.sparklely.sparkle.core.user.Sender
 
 class CommonMessage : Message {
+    private var id: String = ""
     override fun toString(): String {
         TODO("Not yet implemented")
     }

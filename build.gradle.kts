@@ -1,6 +1,9 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     id("java")
     kotlin("jvm") version "2.0.0"
+    id ("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "org.cneko.sparkle.core"
@@ -33,4 +36,14 @@ dependencies {
 }
 kotlin {
     jvmToolchain(11)
+}
+
+tasks.withType<ShadowJar> {
+    archiveFileName.set("sparkle-core.jar")
+    manifest {
+        attributes(mapOf("Main-Class" to "org.sparklely.sparkle.core.Main"))
+    }
+    dependencies{
+        include(dependency("net.byteflux:libby-core:1.3.0"))
+    }
 }
